@@ -1,0 +1,13 @@
+# Temporary Portable Git binaries
+.git-portable/
+MinGit*.zip
+
+# Local server log/test files
+*.log
+server.pyc
+__pycache__/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

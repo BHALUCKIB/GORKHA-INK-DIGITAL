@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gorkha Ink Magazine</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#f0eded",
+                      "secondary-container": "#dbdaf7",
+                      "on-surface-variant": "#43474e",
+                      "tertiary": "#131143",
+                      "on-error-container": "#93000a",
+                      "error": "#ba1a1a",
+                      "lavender-tint": "#EBEBFF",
+                      "paper-white": "#F9F9FB",
+                      "secondary": "#5b5d74",
+                      "surface-tint": "#455f87",
+                      "surface-bright": "#fcf9f8",
+                      "surface-container-highest": "#e5e2e1",
+                      "inverse-on-surface": "#f3f0ef",
+                      "primary-fixed-dim": "#adc8f5",
+                      "outline-variant": "#c4c6cf",
+                      "ink-black": "#0A0A0A",
+                      "on-error": "#ffffff",
+                      "on-secondary-container": "#5e5f77",
+                      "surface-dim": "#dcd9d9",
+                      "primary-container": "#0f2d52",
+                      "primary-fixed": "#d5e3ff",
+                      "primary": "#001835",
+                      "tertiary-fixed-dim": "#c3c1fd",
+                      "inverse-primary": "#adc8f5",
+                      "on-primary-fixed-variant": "#2d476e",
+                      "on-secondary-fixed": "#181a2e",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#eae7e7",
+                      "surface-container-lowest": "#ffffff",
+                      "background": "#fcf9f8",
+                      "on-primary-container": "#7b95c0",
+                      "surface-variant": "#e5e2e1",
+                      "on-tertiary": "#ffffff",
+                      "on-surface": "#1c1b1b",
+                      "secondary-fixed": "#e0e0fc",
+                      "outline": "#74777f",
+                      "on-tertiary-container": "#908fc7",
+                      "on-tertiary-fixed": "#161446",
+                      "on-background": "#1c1b1b",
+                      "surface": "#fcf9f8",
+                      "inverse-surface": "#313030",
+                      "tertiary-container": "#282759",
+                      "tertiary-fixed": "#e2dfff",
+                      "on-secondary-fixed-variant": "#44455c",
+                      "on-tertiary-fixed-variant": "#424174",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#001b3b",
+                      "surface-container-low": "#f6f3f2",
+                      "secondary-fixed-dim": "#c4c4e0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "stack-lg": "48px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "stack-md": "24px",
+                      "stack-xl": "80px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Chivo"
+                      ],
+                      "headline-lg": [
+                              "Chivo"
+                      ],
+                      "body-md": [
+                              "Source Serif 4"
+                      ],
+                      "caption": [
+                              "Source Serif 4"
+                      ],
+                      "body-lg": [
+                              "Source Serif 4"
+                      ],
+                      "headline-lg-mobile": [
+                              "Chivo"
+                      ],
+                      "label-md": [
+                              "Chivo"
+                      ],
+                      "headline-md": [
+                              "Chivo"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "caption": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+      </style>
+</head>
+<body class="bg-paper-white text-ink-black font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="bg-paper-white border-b border-outline sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-display-lg text-headline-md tracking-tighter text-ink-black uppercase" href="#">
+                GORKHA INK
+            </a>
+<!-- Navigation Links (Desktop) -->
+<ul class="hidden md:flex gap-8 items-center">
+<li><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Archive</a></li>
+<li><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Digital</a></li>
+<li><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">About</a></li>
+<li><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center bg-ink-black text-paper-white font-label-md text-label-md uppercase px-6 py-2.5 rounded-none hover:opacity-80 transition-opacity active:scale-95">
+                    Subscribe
+                </button>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-ink-black p-2">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-xl md:py-32 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center border-b border-outline">
+<div class="md:col-span-5 flex flex-col gap-stack-md z-10 relative">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-ink-black uppercase tracking-tighter leading-none">
+                    GORKHA <br/> INK
+                </h1>
+<p class="font-headline-md text-body-lg text-primary-container italic max-w-md">
+                    Amplify. Document. Represent.
+                </p>
+<div class="h-px w-24 bg-ink-black mt-2"></div>
+<div class="mt-8 flex gap-4">
+<button class="bg-primary text-paper-white font-label-md text-label-md uppercase px-6 py-3 rounded-none hover:bg-tertiary transition-colors active:scale-95 border border-primary">
+                        Read Pilot Issue
+                    </button>
+<button class="bg-transparent text-ink-black font-label-md text-label-md uppercase px-6 py-3 rounded-none hover:bg-lavender-tint transition-colors active:scale-95 border-2 border-ink-black">
+                        Explore Archive
+                    </button>
+</div>
+</div>
+<div class="md:col-span-7 mt-8 md:mt-0">
+<div class="relative bg-surface-container p-4 border border-outline">
+<img alt="Gorkha Ink Magazine Vol I: Pilot Issue Cover" class="w-full h-auto object-cover border border-outline-variant grayscale contrast-125 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6l1iSVfu35gDQ_QaujxpEY5znA_QPK_1hK1i8seSPF2EzvcRmmqjuu0tV111DjUlYQbq0HD7BH1su-cPdlhstZCEerCmoipQC2p95-O0TNNe76pw9-YQckcNjUsFheZM5CtWSNOJkWu9kLFXCgOpxyd4TCjU1cjc-oupO6kZydOt6DaKoxjez3bijRLb19mPIVwV2hwSHvx_g4t3Ii4od1F-v-LK-7a-QFwcF6byJBTOc4telVRV9lH1CB2LEQpUYHYeRqPSCii8"/>
+</div>
+</div>
+</section>
+<!-- Mission / About Section -->
+<section class="bg-surface-container py-stack-xl border-b border-outline">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-start-3 md:col-span-8 flex flex-col gap-stack-lg text-center items-center">
+<span class="font-label-md text-label-md uppercase text-secondary tracking-widest">Our Mission</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-ink-black leading-tight max-w-3xl">
+                        A collective, amplifying Gorkha voices through the documentation, promotion and cultivation of creativity and representation.
+                    </h2>
+<div class="h-px w-full bg-outline-variant max-w-md my-4"></div>
+<div class="font-body-md text-body-md text-on-surface-variant text-left md:columns-2 gap-12 text-justify">
+                        {{DATA:DOCUMENT:DOCUMENT_2}}
+                    </div>
+</div>
+</div>
+</section>
+<!-- Archive Highlights Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-xl">
+<div class="flex justify-between items-end border-b border-ink-black pb-4 mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-ink-black uppercase tracking-tight">From the Archive</h2>
+<a class="font-label-md text-label-md uppercase text-primary hover:underline transition-all flex items-center gap-1" href="#">
+                    View Complete Archive <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-outline bg-outline">
+<!-- Article 1 -->
+<article class="bg-paper-white p-8 flex flex-col gap-4 border-r border-b md:border-b-0 border-outline hover:bg-lavender-tint transition-colors group cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-md text-label-md uppercase text-secondary border border-secondary px-2 py-1 text-xs">Vol I</span>
+<span class="font-label-md text-label-md uppercase text-secondary text-xs">Feature</span>
+</div>
+<h3 class="font-headline-md text-body-lg md:text-headline-md text-ink-black group-hover:text-primary transition-colors leading-tight">An Ethnic Dubiety: Indian Gorkhas &amp; The Nepal Revolution</h3>
+<div class="mt-auto pt-8 border-t border-outline-variant flex items-center gap-2">
+<div class="w-8 h-px bg-ink-black"></div>
+<span class="font-caption text-caption italic text-on-surface-variant">by Vaishnav S Khati</span>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="bg-surface-container p-8 flex flex-col gap-4 border-r border-b md:border-b-0 border-outline hover:bg-secondary-container transition-colors group cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-md text-label-md uppercase text-secondary border border-secondary px-2 py-1 text-xs">Vol I</span>
+<span class="font-label-md text-label-md uppercase text-secondary text-xs">Environment</span>
+</div>
+<h3 class="font-headline-md text-body-lg md:text-headline-md text-ink-black group-hover:text-primary transition-colors leading-tight">Josephite Towards A Zero Waste Journey</h3>
+<div class="mt-auto pt-8 border-t border-outline-variant flex items-center gap-2">
+<div class="w-8 h-px bg-ink-black"></div>
+<span class="font-caption text-caption italic text-on-surface-variant">By St. Joseph's Convent</span>
+</div>
+</article>
+<!-- Article 3 (Inverted) -->
+<article class="bg-primary-container text-paper-white p-8 flex flex-col gap-4 hover:bg-tertiary transition-colors group cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-md text-label-md uppercase text-primary-fixed border border-primary-fixed px-2 py-1 text-xs">Pilot Issue</span>
+<span class="font-label-md text-label-md uppercase text-primary-fixed-dim text-xs">Editorial</span>
+</div>
+<h3 class="font-headline-md text-body-lg md:text-headline-md text-paper-white group-hover:text-primary-fixed transition-colors leading-tight">Shameful / लाजमर्दो : Voice of the winds</h3>
+<div class="mt-auto pt-8 border-t border-primary-fixed-dim/30 flex items-center gap-2">
+<div class="w-8 h-px bg-paper-white"></div>
+<span class="font-caption text-caption italic text-primary-fixed-dim">The Bipul Chettri Interview</span>
+</div>
+</article>
+</div>
+</section>
+<!-- Digital / Substack Section -->
+<section class="bg-paper-white py-stack-xl border-t border-b border-ink-black">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 flex justify-center md:justify-end md:pr-12 border-b md:border-b-0 md:border-r border-outline pb-8 md:pb-0">
+<img alt="Gorkha Ink Substack Logo" class="w-32 h-32 md:w-48 md:h-48 object-contain mix-blend-multiply grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/AP1WRLtgPLVSfnjJk4skj4B3MGPYHiNxiVYk8GS0IjtR4JVC5cSo23LdlukfhUqYPEkYAH82nV316msXYdrEKi2nTCQhWTVGzZfkJcVCrFV5ZPDS_t_Xu2OTX5GpoAe7xKY3_72BnCnu6mQ5n3DMVeGUGunj8U4qVl3zFccRpXty6vL4RvonETNSY0uCZ-HvV0Jl5Qk5zwP0yO0nRx_JnaD5tPACz6Sc7pX0vSxezFFWmI6imFlkPmrbegGkpw"/>
+</div>
+<div class="md:col-span-7 flex flex-col gap-stack-sm items-start md:pl-12">
+<span class="font-label-md text-label-md uppercase text-secondary tracking-widest">Digital Dispatch</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-tertiary uppercase tracking-tighter">Gorkha Ink Digital</h2>
+<p class="font-body-lg text-body-lg text-on-surface mb-6 max-w-lg">
+                        Extend the conversation beyond print. Subscribe to our Substack for weekly essays, digital archives, and early access to creative submissions delivered directly to your inbox.
+                    </p>
+<button class="bg-tertiary text-paper-white font-label-md text-label-md uppercase px-8 py-4 rounded-none hover:bg-primary transition-colors active:scale-95 flex items-center gap-2 border border-tertiary">
+                        Subscribe on Substack <span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-primary">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-xl max-w-container-max mx-auto">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-4">
+<div class="font-display-lg text-headline-md text-ink-black uppercase tracking-tighter">
+                    GORKHA INK
+                </div>
+<p class="font-caption text-caption text-on-surface max-w-sm">
+                    © 2024 GORKHA INK MAGAZINE. AMPLIFYING VOICES THROUGH CREATIVE DOCUMENTATION.
+                </p>
+</div>
+<!-- Links -->
+<div class="flex flex-col md:items-end justify-end">
+<ul class="flex flex-col md:flex-row gap-4 md:gap-8 flex-wrap">
+<li><a class="font-label-md text-label-md text-secondary hover:text-primary hover:underline transition-all uppercase" href="#">Cultural Archive</a></li>
+<li><a class="font-label-md text-label-md text-secondary hover:text-primary hover:underline transition-all uppercase" href="#">Creative Submission</a></li>
+<li><a class="font-label-md text-label-md text-secondary hover:text-primary hover:underline transition-all uppercase" href="#">Privacy Policy</a></li>
+<li><a class="font-label-md text-label-md text-secondary hover:text-primary hover:underline transition-all uppercase" href="#">Substack</a></li>
+<li><a class="font-label-md text-label-md text-secondary hover:text-primary hover:underline transition-all uppercase" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

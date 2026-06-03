@@ -1,0 +1,151 @@
+/* Custom styles for Gorkha Ink Full-Page Background Scroll Experience */
+
+:root {
+  --color-bg-dark: #0A0A0A; /* Ink Black */
+  --color-paper-white: #F9F9FB;
+  --color-lavender: #dbdaf7;
+  --color-lavender-tint: #EBEBFF;
+  --color-surface-tint: #adc8f5;
+  --font-display: 'Chivo', sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for magazine feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 0px; /* Sharp corners */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-lavender);
+}
+
+/* Preloader Screen */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.8s;
+}
+
+#preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-content {
+  text-align: center;
+  max-width: 360px;
+  width: 100%;
+  padding: 20px;
+}
+
+.loader-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-paper-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.loader-subtitle {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: #dbdaf7; /* lavender */
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 0px; /* Strict 0px border-radius shape language */
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--color-lavender-tint);
+  border-radius: 0px;
+  transition: width 0.1s linear;
+}
+
+.progress-text {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--color-lavender);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Full-Screen Canvas Backdrop styling */
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Placed behind all content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  background-color: var(--color-bg-dark);
+}
+
+#animation-canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ambient Overlay to blend canvas with dark scrollytelling background and enhance readability */
+.vignette-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(10, 10, 10, 0.1) 20%, rgba(10, 10, 10, 0.75) 90%),
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.5) 0%, transparent 20%, transparent 80%, rgba(10, 10, 10, 0.8) 100%);
+}
+
+/* Keyframes Animations */
+@keyframes fadeUpIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

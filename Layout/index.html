@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Gorkha Ink Magazine — Amplify. Document. Represent.</title>
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#151515",
+            "secondary-container": "#2c2b3e",
+            "on-surface-variant": "#c4c6cf",
+            "tertiary": "#c3c1fd",
+            "on-error-container": "#ffdad6",
+            "error": "#ffb4ab",
+            "lavender-tint": "#EBEBFF",
+            "paper-white": "#F9F9FB",
+            "secondary": "#dbdaf7",
+            "surface-tint": "#adc8f5",
+            "surface-bright": "#1c1b1b",
+            "surface-container-highest": "#313030",
+            "inverse-on-surface": "#1c1b1b",
+            "primary-fixed-dim": "#adc8f5",
+            "outline-variant": "#43474e",
+            "ink-black": "#0A0A0A",
+            "on-error": "#690005",
+            "on-secondary-container": "#e0e0fc",
+            "surface-dim": "#141313",
+            "primary-container": "#004481",
+            "primary-fixed": "#d5e3ff",
+            "primary": "#adc8f5",
+            "tertiary-fixed-dim": "#c3c1fd",
+            "inverse-primary": "#005faf",
+            "on-primary-fixed-variant": "#d5e3ff",
+            "on-secondary-fixed": "#e0e0fc",
+            "error-container": "#93000a",
+            "on-primary": "#00315e",
+            "surface-container-high": "#272626",
+            "surface-container-lowest": "#0a0a0a",
+            "background": "#0c0a0a",
+            "on-primary-container": "#d5e3ff",
+            "surface-variant": "#43474e",
+            "on-tertiary": "#161446",
+            "on-surface": "#eae7e7",
+            "secondary-fixed": "#e0e0fc",
+            "outline": "#8e919f",
+            "on-tertiary-container": "#e2dfff",
+            "on-tertiary-fixed": "#e2dfff",
+            "on-background": "#eae7e7",
+            "surface": "#1c1b1b",
+            "inverse-surface": "#eae7e7",
+            "tertiary-container": "#282759",
+            "tertiary-fixed": "#e2dfff",
+            "on-secondary-fixed-variant": "#e0e0fc",
+            "on-tertiary-fixed-variant": "#e2dfff",
+            "on-secondary": "#2b2d42",
+            "on-primary-fixed": "#001b3b",
+            "surface-container-low": "#1d1c1c",
+            "secondary-fixed-dim": "#c4c4e0"
+          },
+          "borderRadius": {
+            "DEFAULT": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "20px",
+            "margin-desktop": "64px",
+            "stack-lg": "48px",
+            "gutter": "24px",
+            "stack-sm": "8px",
+            "stack-md": "24px",
+            "stack-xl": "80px",
+            "container-max": "1200px"
+          },
+          "fontFamily": {
+            "display-lg": ["Chivo"],
+            "headline-lg": ["Chivo"],
+            "body-md": ["Source Serif 4"],
+            "caption": ["Source Serif 4"],
+            "body-lg": ["Source Serif 4"],
+            "headline-lg-mobile": ["Chivo"],
+            "label-md": ["Chivo"],
+            "headline-md": ["Chivo"]
+          },
+          "fontSize": {
+            "display-lg": [
+              "72px",
+              {
+                "lineHeight": "80px",
+                "letterSpacing": "-0.04em",
+                "fontWeight": "900"
+              }
+            ],
+            "headline-lg": [
+              "48px",
+              {
+                "lineHeight": "56px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "body-md": [
+              "18px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "400"
+              }
+            ],
+            "caption": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "400"
+              }
+            ],
+            "body-lg": [
+              "20px",
+              {
+                "lineHeight": "32px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg-mobile": [
+              "36px",
+              {
+                "lineHeight": "44px",
+                "fontWeight": "700"
+              }
+            ],
+            "label-md": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "0.05em",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-md": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "700"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+  
+  <!-- Merged Custom CSS for preloader and fixed canvas animation -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-transparent text-paper-white font-body-md antialiased overflow-x-hidden">
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="loader-content">
+      <h1 class="loader-title">GORKHA INK</h1>
+      <p class="loader-subtitle">Preparing the Gallery...</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+      <div class="progress-text" id="progress-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- Full-Screen Sticky Canvas Background -->
+  <div class="canvas-container">
+    <canvas id="animation-canvas"></canvas>
+    <!-- Ambient Vignette Overlay -->
+    <div class="vignette-overlay"></div>
+  </div>
+
+  <!-- TopNavBar (Glassmorphic) -->
+  <nav class="bg-[#0A0A0A]/70 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+      <!-- Brand -->
+      <a class="font-display-lg text-headline-md tracking-tighter text-paper-white uppercase" href="#">
+        GORKHA INK
+      </a>
+      <!-- Navigation Links (Desktop) -->
+      <ul class="hidden md:flex gap-8 items-center">
+        <li><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-paper-white transition-colors" href="https://gorkhaink.substack.com/archive" target="_blank" rel="noopener noreferrer">Archive</a></li>
+        <li><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-paper-white transition-colors" href="https://gorkhaink.substack.com" target="_blank" rel="noopener noreferrer">Digital</a></li>
+        <li><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-paper-white transition-colors" href="https://gorkhaink.substack.com/about" target="_blank" rel="noopener noreferrer">About</a></li>
+        <li><a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-paper-white transition-colors" href="https://gorkhaink.substack.com/about" target="_blank" rel="noopener noreferrer">Contact</a></li>
+      </ul>
+      <!-- Trailing Action -->
+      <div class="flex items-center gap-4">
+        <a href="https://gorkhaink.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center justify-center bg-paper-white text-ink-black font-label-md text-label-md uppercase px-6 py-2.5 rounded-none hover:bg-lavender-tint transition-all active:scale-95">
+          Subscribe
+        </a>
+        <!-- Mobile Menu Icon -->
+        <button class="md:hidden text-paper-white p-2">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative z-30">
+    <!-- Hero Section -->
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-xl md:py-32 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center border-b border-white/10 bg-transparent">
+      <div class="md:col-span-5 flex flex-col gap-stack-md z-10 relative">
+        <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-paper-white uppercase tracking-tighter leading-none">
+          GORKHA <br/> INK
+        </h1>
+        <p class="font-headline-md text-body-lg text-secondary italic max-w-md">
+          Amplify. Document. Represent.
+        </p>
+        <div class="h-px w-24 bg-paper-white mt-2"></div>
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="https://gorkhaink.substack.com/p/pilot-issue" target="_blank" rel="noopener noreferrer" class="bg-paper-white text-ink-black font-label-md text-label-md uppercase px-6 py-3 rounded-none hover:bg-lavender-tint transition-all active:scale-95 border border-paper-white text-center">
+            Read Pilot Issue
+          </a>
+          <a href="https://gorkhaink.substack.com/archive" target="_blank" rel="noopener noreferrer" class="bg-transparent text-paper-white font-label-md text-label-md uppercase px-6 py-3 rounded-none hover:bg-white/10 transition-all active:scale-95 border-2 border-paper-white text-center">
+            Explore Archive
+          </a>
+        </div>
+      </div>
+      <div class="md:col-span-7 mt-8 md:mt-0">
+        <div class="relative bg-ink-black/20 p-4 border border-white/10 backdrop-blur-sm">
+          <img alt="Gorkha Ink Magazine Vol I: Pilot Issue Cover" class="w-full h-auto object-cover border border-white/10 grayscale contrast-125 mix-blend-lighten" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6l1iSVfu35gDQ_QaujxpEY5znA_QPK_1hK1i8seSPF2EzvcRmmqjuu0tV111DjUlYQbq0HD7BH1su-cPdlhstZCEerCmoipQC2p95-O0TNNe76pw9-YQckcNjUsFheZM5CtWSNOJkWu9kLFXCgOpxyd4TCjU1cjc-oupO6kZydOt6DaKoxjez3bijRLb19mPIVwV2hwSHvx_g4t3Ii4od1F-v-LK-7a-QFwcF6byJBTOc4telVRV9lH1CB2LEQpUYHYeRqPSCii8"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission / About Section (Glassmorphic) -->
+    <section id="mission" class="bg-ink-black/30 backdrop-blur-md py-stack-xl border-b border-white/10 scroll-mt-20">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        <div class="md:col-start-3 md:col-span-8 flex flex-col gap-stack-lg text-center items-center">
+          <span class="font-label-md text-label-md uppercase text-secondary tracking-widest">Our Mission</span>
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-paper-white leading-tight max-w-3xl">
+            A collective, amplifying Gorkha voices through the documentation, promotion and cultivation of creativity and representation.
+          </h2>
+          <div class="h-px w-full bg-white/10 max-w-md my-4"></div>
+          <div class="font-body-md text-body-md text-on-surface-variant text-left md:columns-2 gap-12 text-justify">
+            Gorkha Ink is born out of a desire to create a dedicated space for Gorkha narratives—stories that have long been pushed to the periphery of contemporary digital media. As a cultural collective, we are committed to documenting the multi-layered histories, social realities, and artistic expressions of the Gorkha community, particularly in the Indian diaspora and borderland regions.
+            <br/><br/>
+            By pairing deep investigative journalism with photography, poetry, and long-form prose, Gorkha Ink bridges the gap between traditional heritage and contemporary commentary. We believe representation is not merely about visibility; it is about reclaiming authorship over our own histories and cultivating a creative space where Gorkha voices can breathe, reflect, and inspire future generations.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Archive Highlights Section -->
+    <section id="archive" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-xl scroll-mt-20">
+      <div class="flex justify-between items-end border-b border-white/10 pb-4 mb-stack-lg">
+        <h2 class="font-headline-md text-headline-md text-paper-white uppercase tracking-tight">From the Archive</h2>
+        <a class="font-label-md text-label-md uppercase text-secondary hover:text-paper-white hover:underline transition-all flex items-center gap-1" href="https://gorkhaink.substack.com/archive" target="_blank" rel="noopener noreferrer">
+          View Complete Archive <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10 bg-white/10 backdrop-blur-sm">
+        
+        <!-- Article 1 -->
+        <a href="https://gorkhaink.substack.com/p/ethnic-dubiety" target="_blank" rel="noopener noreferrer" class="bg-[#0A0A0A]/50 p-8 flex flex-col gap-4 border-r border-b md:border-b-0 border-white/10 hover:bg-[#0A0A0A]/70 hover:backdrop-blur-none transition-all group cursor-pointer">
+          <div class="flex justify-between items-start mb-4">
+            <span class="font-label-md text-label-md uppercase text-secondary border border-secondary px-2 py-1 text-xs">Vol I</span>
+            <span class="font-label-md text-label-md uppercase text-secondary text-xs">Feature</span>
+          </div>
+          <h3 class="font-headline-md text-body-lg md:text-headline-md text-paper-white group-hover:text-secondary transition-colors leading-tight">An Ethnic Dubiety: Indian Gorkhas &amp; The Nepal Revolution</h3>
+          <div class="mt-auto pt-8 border-t border-white/10 flex items-center gap-2">
+            <div class="w-8 h-px bg-paper-white"></div>
+            <span class="font-caption text-caption italic text-on-surface-variant">by Vaishnav S Khati</span>
+          </div>
+        </a>
+        
+        <!-- Article 2 -->
+        <a href="https://gorkhaink.substack.com/p/zero-waste-journey" target="_blank" rel="noopener noreferrer" class="bg-[#0A0A0A]/40 p-8 flex flex-col gap-4 border-r border-b md:border-b-0 border-white/10 hover:bg-[#0A0A0A]/60 hover:backdrop-blur-none transition-all group cursor-pointer">
+          <div class="flex justify-between items-start mb-4">
+            <span class="font-label-md text-label-md uppercase text-secondary border border-secondary px-2 py-1 text-xs">Vol I</span>
+            <span class="font-label-md text-label-md uppercase text-secondary text-xs">Environment</span>
+          </div>
+          <h3 class="font-headline-md text-body-lg md:text-headline-md text-paper-white group-hover:text-secondary transition-colors leading-tight">Josephite Towards A Zero Waste Journey</h3>
+          <div class="mt-auto pt-8 border-t border-white/10 flex items-center gap-2">
+            <div class="w-8 h-px bg-paper-white"></div>
+            <span class="font-caption text-caption italic text-on-surface-variant">By St. Joseph's Convent</span>
+          </div>
+        </a>
+        
+        <!-- Article 3 (Inverted) -->
+        <a href="https://gorkhaink.substack.com/p/shameful-voice-of-winds" target="_blank" rel="noopener noreferrer" class="bg-primary-container/30 p-8 flex flex-col gap-4 hover:bg-primary-container/50 transition-all group cursor-pointer">
+          <div class="flex justify-between items-start mb-4">
+            <span class="font-label-md text-label-md uppercase text-primary-fixed border border-primary-fixed px-2 py-1 text-xs">Pilot Issue</span>
+            <span class="font-label-md text-label-md uppercase text-primary-fixed-dim text-xs">Editorial</span>
+          </div>
+          <h3 class="font-headline-md text-body-lg md:text-headline-md text-paper-white group-hover:text-secondary transition-colors leading-tight">Shameful / लाजमर्दो : Voice of the winds</h3>
+          <div class="mt-auto pt-8 border-t border-white/10 flex items-center gap-2">
+            <div class="w-8 h-px bg-paper-white"></div>
+            <span class="font-caption text-caption italic text-primary-fixed-dim">The Bipul Chettri Interview</span>
+          </div>
+        </a>
+        
+      </div>
+    </section>
+
+    <!-- Digital / Substack Section -->
+    <section id="digital-dispatch" class="bg-ink-black/20 backdrop-blur-sm py-stack-xl border-t border-b border-white/10 scroll-mt-20">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+        <div class="md:col-span-5 flex justify-center md:justify-end md:pr-12 border-b md:border-b-0 md:border-r border-white/10 pb-8 md:pb-0">
+          <img alt="Gorkha Ink Substack Logo" class="w-32 h-32 md:w-48 md:h-48 object-contain mix-blend-screen grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/AP1WRLtgPLVSfnjJk4skj4B3MGPYHiNxiVYk8GS0IjtR4JVC5cSo23LdlukfhUqYPEkYAH82nV316msXYdrEKi2nTCQhWTVGzZfkJcVCrFV5ZPDS_t_Xu2OTX5GpoAe7xKY3_72BnCnu6mQ5n3DMVeGUGunj8U4qVl3zFccRpXty6vL4RvonETNSY0uCZ-HvV0Jl5Qk5zwP0yO0nRx_JnaD5tPACz6Sc7pX0vSxezFFWmI6imFlkPmrbegGkpw"/>
+        </div>
+        <div class="md:col-span-7 flex flex-col gap-stack-sm items-start md:pl-12">
+          <span class="font-label-md text-label-md uppercase text-secondary tracking-widest">Digital Dispatch</span>
+          <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary uppercase tracking-tighter">Gorkha Ink Digital</h2>
+          <p class="font-body-lg text-body-lg text-on-surface mb-6 max-w-lg">
+            Extend the conversation beyond print. Subscribe to our Substack for weekly essays, digital archives, and early access to creative submissions delivered directly to your inbox.
+          </p>
+          <a href="https://gorkhaink.substack.com" target="_blank" rel="noopener noreferrer" class="bg-paper-white text-ink-black font-label-md text-label-md uppercase px-8 py-4 rounded-none hover:bg-lavender-tint transition-all active:scale-95 flex items-center gap-2 border border-paper-white inline-block">
+            Subscribe on Substack <span class="material-symbols-outlined text-sm">open_in_new</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Glassmorphic) -->
+  <footer id="footer" class="relative z-30 bg-[#0A0A0A]/80 backdrop-blur-md border-t border-white/10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-xl max-w-container-max mx-auto">
+      <!-- Brand & Copyright -->
+      <div class="flex flex-col gap-4">
+        <div class="font-display-lg text-headline-md text-paper-white uppercase tracking-tighter">
+          GORKHA INK
+        </div>
+        <p class="font-caption text-caption text-on-surface max-w-sm">
+          © 2026 GORKHA INK MAGAZINE. AMPLIFYING VOICES THROUGH CREATIVE DOCUMENTATION.
+        </p>
+      </div>
+      <!-- Links -->
+      <div class="flex flex-col md:items-end justify-end">
+        <ul class="flex flex-col md:flex-row gap-4 md:gap-8 flex-wrap">
+          <li><a class="font-label-md text-label-md text-secondary hover:text-paper-white hover:underline transition-all uppercase" href="https://gorkhaink.substack.com/archive" target="_blank" rel="noopener noreferrer">Cultural Archive</a></li>
+          <li><a class="font-label-md text-label-md text-secondary hover:text-paper-white hover:underline transition-all uppercase" href="https://gorkhaink.substack.com/about" target="_blank" rel="noopener noreferrer">Creative Submission</a></li>
+          <li><a class="font-label-md text-label-md text-secondary hover:text-paper-white hover:underline transition-all uppercase" href="https://gorkhaink.substack.com/about" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+          <li><a class="font-label-md text-label-md text-secondary hover:text-paper-white hover:underline transition-all uppercase" href="https://gorkhaink.substack.com" target="_blank" rel="noopener noreferrer">Substack</a></li>
+          <li><a class="font-label-md text-label-md text-secondary hover:text-paper-white hover:underline transition-all uppercase" href="https://gorkhaink.substack.com/about" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App JavaScript for loading and scroll controller -->
+  <script src="app.js"></script>
+</body>
+</html>
