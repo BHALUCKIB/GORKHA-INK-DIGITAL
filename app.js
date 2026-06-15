@@ -2,7 +2,7 @@
 
 // Configuration
 const totalFrames = 190;
-const framePattern = (index) => `frames/ezgif-frame-${String(index).padStart(3, '0')}.jpg`;
+const framePattern = (index) => `frames-v2/ezgif-frame-${String(index).padStart(3, '0')}.jpg`;
 const images = [];
 let loadedCount = 0;
 
