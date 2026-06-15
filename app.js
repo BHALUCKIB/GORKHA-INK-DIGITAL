@@ -1,7 +1,7 @@
 // Gorkha Ink Scroll Frame Animation Controller — Full Page Backdrop
 
 // Configuration
-const totalFrames = 221;
+const totalFrames = 190;
 const framePattern = (index) => `frames/ezgif-frame-${String(index).padStart(3, '0')}.jpg`;
 const images = [];
 let loadedCount = 0;
