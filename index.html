@@ -165,7 +165,26 @@
   <!-- Merged Custom CSS for preloader and fixed canvas animation -->
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-ink-black text-paper-white font-body-md antialiased overflow-x-hidden">
+<body class="bg-transparent text-paper-white font-body-md antialiased overflow-x-hidden">
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="loader-content">
+      <h1 class="loader-title">GORKHA INK</h1>
+      <p class="loader-subtitle">Preparing the Gallery...</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+      <div class="progress-text" id="progress-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- Full-Screen Sticky Canvas Background -->
+  <div class="canvas-container">
+    <canvas id="animation-canvas"></canvas>
+    <!-- Ambient Vignette Overlay -->
+    <div class="vignette-overlay"></div>
+  </div>
 
   <!-- TopNavBar (Glassmorphic) -->
   <nav class="bg-[#0A0A0A]/70 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
@@ -351,5 +370,7 @@
     </div>
   </footer>
 
+  <!-- App JavaScript for loading and scroll controller -->
+  <script src="app.js"></script>
 </body>
 </html>
